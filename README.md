@@ -1,22 +1,17 @@
 # TheEdgeOfAbyss
-Don't bring your colonists over the edge... or face brutal consequences.
+Inspire hope among your people. Or not.
 
-The Edge of Abyss is a RimWorld mod that inserts only 1 key feature: the Edge of Abyss (duh).
+The Edge of Abyss is a RimWorld mod that introduces a new system to complement the vanilla Mood system: the Hope system.
 
-When your colonists are unhappy enough, you will be notified that the colonists are "at the edge of abyss". If you choose to continue ignoring your colonists' well-being, your colonists will feel worse and worse, triggering more metal breaks, and eventually, trigger the Abyss.
+Under the Hope system, a good mood will contribute to high hope, and high hope will grant a mood bonus. Both systems interact with each other to create something more interesting.
 
-The Abyss is a special incident that works as a mental-break-giving mechanism independent of the vanilla MB system. Depending on the severity of the colonists' mood, different mental breaks will be given to the colonists, with special focus for the following mental breaks:
+# Previous Releases
 
-## Minor mental breaks
-- Hide in room
-- Sad wander
+You will find previous releases in the `Releases` folder in this repo, but not in GitHub's "Releases" section, because I find the former approach more convenient.
 
-## Major mental breaks
-- Psychotic wandering
-- Social drug binge
+Steps to download them:
 
-## Extreme mental breaks
-- Catatonia
-- Given up and leaving
-- Jailbreaker
-- Run wild
+1. Navigate to the `Releases` folder in the repo, click on the folder
+2. Find and click on the `7z` file that you wish to download
+3. Click "Download" on the right side of the page
+4. Follow standard file-downloading procedures
