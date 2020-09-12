@@ -1,4 +1,4 @@
-# TheEdgeOfAbyss
+# The Edge Of Abyss
 Inspire hope among your people. Or not.
 
 The Edge of Abyss is a RimWorld mod that introduces a new system to complement the vanilla Mood system: the Hope system.
