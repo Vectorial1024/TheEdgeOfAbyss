@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThoughtDef>
+    <defName>HopeSpectrum</defName>
+    <workerClass>EdgeOfAbyss.Hope.ThoughtWorker_NeedHope</workerClass>
+    <!--
+    <nullifyingTraits>
+      <li>NightOwl</li>
+      <li>Undergrounder</li>
+    </nullifyingTraits>
+    -->
+    <stages>
+      <li>
+        <label>utterly hopeless</label>
+        <description>There is no hope! Absolutely none! It's a lie! Stop it! I said, STOP IT!!!</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+      <li>
+        <label>hopeless</label>
+        <description>There is no hope. Every day, I struggle to cope with what was given to me by cruel reality.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+      <li>
+        <label>somewhat hopeless</label>
+        <description>There isn't much hope. I don't know if I have the strength to survive in this.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+      <li>
+        <label>indifferent</label>
+        <description>I don't feel particularly hopeful or hopeless at the moment.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+      <li>
+        <label>somewhat hopeful</label>
+        <description>There is a little bit of hope around every little corner of my little, honest life.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+      <li>
+        <label>hopeful</label>
+        <description>There is hope. I'm sure of it. It soothes my daily life, no matter how rough reality may be.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+      <li>
+        <label>extremely hopeful</label>
+        <description>There exists hope! The days are bright, and the nights are calm. We walk in confidence and strength.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

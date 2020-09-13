@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!--
+  <PawnColumnDef>
+    <defName>KnownNewsCount</defName>
+    <workerClass>Desynchronized.Interfaces.PawnColumnWorker_KnownNewsCount</workerClass>
+    <sortable>true</sortable>
+    <headerIcon>UI/Icons/TaleNews/KnownNews</headerIcon>
+    <headerTip>Count the number of news that are known by this pawn.</headerTip>
+    <width>0</width>
+  </PawnColumnDef>
+-->
+
+  <PawnColumnDef>
+    <defName>HopeLevelReadout</defName>
+    <workerClass>EdgeOfAbyss.UI.PawnColumnWorker_HopeLevelReadout</workerClass>
+    <sortable>true</sortable>
+    <headerIcon>UI/Icons/ColonistBar/Inspired</headerIcon>
+    <headerTip>Display the current hope level of colonists.</headerTip>
+    <width>22</width>
+  </PawnColumnDef>
+
+<!--
+  <PawnColumnDef>
+    <defName>DetailedHopeOverviewButton</defName>
+    <label>view individual hope level</label>
+    <workerClass>EdgeOfAbyss.UI.PawnColumnWorker_HopeBreakdownButton</workerClass>
+    <width>22</width>
+  </PawnColumnDef>
+-->
+
+</Defs>

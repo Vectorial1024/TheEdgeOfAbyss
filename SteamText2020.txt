@@ -1,0 +1,37 @@
+Inspire hope among your people. Or not.
+
+Package ID: V1024.EdgeOfAbyss
+
+[h1]Quick Info[/h1]
+[list]
+[*]New simple system: Hope; interacts with the existing Mood system
+[*]Requires Harmony and HugsLib
+[*]Safe to add to existing saves
+[*]Safe to remove from ongoing saves (for now)
+[/list]
+
+[h1]The Edge of Abyss[/h1]
+This mod adds in a new system: Hope. You can think of this as an extension to the vanilla Mood system, something which can reflect some trends of Colonist behavior. For example, the Mood system would make Colonists feel good when having eaten 1 good meal, while the Hope system would make Colonists feel good when e.g. having eaten several good meals so far.
+
+Hope and Mood will interact with each other, where a good mood will constribute to high hope, and a high hope (from mood and perhaps some other contributors) will grant a mood bonus.
+
+[h1](Reserved)[/h1]
+(Reserved)
+
+[h1]GitHub and Docs[/h1]
+The GitHub repository, along with some documentation and previous version releases, are available here:
+https://github.com/Vectorial1024/TheEdgeOfAbyss
+
+[h1]Support and Donations[/h1]
+Let's perhaps leave it be, and instead spend some time tending to ourselves.
+
+[h1]Credits[/h1]
+This mod would not be possible without the following people (not ordered by importance):
+[list]
+[*]Tynan, for making this wonderful game for us to enjoy
+[*]pardeike's HarmonyLib and UnlimitedHugs' HugsLib, for making mod-making a lot easier
+[*]Maintainers of PublisherPlus (ownership went back and forth, I think there are several of them), for allowing me to minimize mod size on Steam even though the repo is huge and bulky
+[*]Hongkongers, for giving me a great lot of things to think about in my spare time, which eventually inspired this mod
+[/list]
+[h1]Concluding Notes[/h1]
+Real life has become tricky and perhaps confusing for most of us. Stay healthy, stay safe, and wish us all a good luck.

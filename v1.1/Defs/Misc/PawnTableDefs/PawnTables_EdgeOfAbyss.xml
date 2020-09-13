@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnTableDef>
+    <defName>HopeOverview</defName>
+    <workerClass>PawnTable_PlayerPawns</workerClass>
+    <columns>
+      <li>Label</li>
+      <li>GapTiny</li>
+      <li>HopeLevelReadout</li>
+      <!--
+      <li>GapTiny</li>
+      <li>DetailedHopeOverviewButton</li>
+      <li>DetailedKnowledgeList</li>
+      -->
+      <li>RemainingSpace</li>
+    </columns>
+    <minWidth>0</minWidth>
+  </PawnTableDef>
+</Defs>

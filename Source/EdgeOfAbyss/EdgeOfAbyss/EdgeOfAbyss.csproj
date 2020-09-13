@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{383806E3-02E4-48FD-821E-D302FB2F74DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EdgeOfAbyss</RootNamespace>
+    <AssemblyName>EdgeOfAbyss</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\v1.1\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HugsLib">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\818773962\v1.2\Assemblies\HugsLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EdgeOfAbyssMain.cs" />
+    <Compile Include="EdgeOfAbyss_HopeDefOf.cs" />
+    <Compile Include="EdgeOfAbyss_NeedDefOf.cs" />
+    <Compile Include="EdgeOfAbyss_PawnTableDefOf.cs" />
+    <Compile Include="EdgeOfAbyss_ThoughtDefOf.cs" />
+    <Compile Include="Hope\EdgeOfAbyss_HopeDefOf.cs" />
+    <Compile Include="Hope\HLC_Transient.cs" />
+    <Compile Include="Hope\Hope.cs" />
+    <Compile Include="Hope\HopeDef.cs" />
+    <Compile Include="Hope\HopeHandler.cs" />
+    <Compile Include="Hope\HopeState.cs" />
+    <Compile Include="Hope\HopeUtility.cs" />
+    <Compile Include="Hope\HopeWorker.cs" />
+    <Compile Include="Hope\HopeWorker_Empty.cs" />
+    <Compile Include="Hope\HopeWorker_Food.cs" />
+    <Compile Include="Hope\HopeWorker_Mood.cs" />
+    <Compile Include="Hope\HopeWorker_TotalHope.cs" />
+    <Compile Include="Hope\Need_Hope.cs" />
+    <Compile Include="Hope\Pawn_HopeTracker.cs" />
+    <Compile Include="Hope\ThoughtWorker_NeedHope.cs" />
+    <Compile Include="Patches\PostFix_Thing_Ingested.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\GeneralExtensionHelper.cs" />
+    <Compile Include="UI\HopeCardUtility.cs" />
+    <Compile Include="UI\ITab_Pawn_Hope.cs" />
+    <Compile Include="UI\MainTabWindow_HopeOverview.cs" />
+    <Compile Include="UI\PawnColumnWorker_HopeBreakdownButton.cs" />
+    <Compile Include="UI\PawnColumnWorker_HopeLevelReadout.cs" />
+    <Compile Include="Hope\HopeExtender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

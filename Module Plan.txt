@@ -1,0 +1,15 @@
+Hope mechanics
+- Hope: a number
+- Good events increase hope
+- Bad events decrease hope
+- Value tends to 0 (adjusted by Optimistic/Pessimistic traits)
+- Will have a Thought that is based on hope; high hope means good thought, low hope means bad thought
+- (feeling terrible may perhaps be integrated to the ope mechanics)
+
+News mechanics [wait for vanilla v1.1 to fully engage this]
+- Generalized deployment: now listens to the tale manager and makes "permanent tales" instead
+- News spread
+- Bad news affect hope
+
+Social mechanics
+- [Abstract, we are still thinking about this even back in Desync]

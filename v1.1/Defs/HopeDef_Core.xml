@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <EdgeOfAbyss.Hope.HopeDef>
+        <!-- Special type of Hope that serves as the summary of the other hopes -->
+        <defName>TotalHope</defName>
+        <displayOrder>0</displayOrder>
+        <hopeWorker>EdgeOfAbyss.Hope.HopeWorker_TotalHope</hopeWorker>
+        <hopeName>total hope</hopeName>
+        <description>This is the sum of all hope levels of this creature.</description>
+        <flavorText>Ah, yes, hope: an intangible enigma, the manifestation of faith in trying times, often irrational, but undeniably powerful. Intriguing, indeed.</flavorText>
+        <hint>Having low total hope will worsen the mood of this creature.</hint>
+    </EdgeOfAbyss.Hope.HopeDef>
+
+    <EdgeOfAbyss.Hope.HopeDef>
+        <defName>FoodHope</defName>
+        <displayOrder>100</displayOrder>
+        <expectedRange>10</expectedRange>
+        <hopeWorker>EdgeOfAbyss.Hope.HopeWorker_Food</hopeWorker>
+        <hopeName>nutritional hope</hopeName>
+        <description>This is the hope level from having enough to eat.</description>
+        <flavorText>Entropy dictates that all must consume to survive, and generously rewards those who follows such truthful advice.</flavorText>
+        <hint>This hope always decreases at a speed dependent on how hungry this creature is. Maintain this hope by feeding this creature decent food.</hint>
+    </EdgeOfAbyss.Hope.HopeDef>
+
+    <EdgeOfAbyss.Hope.HopeDef>
+        <defName>MoodHope</defName>
+        <displayOrder>200</displayOrder>
+        <expectedRange>10</expectedRange>
+        <hopeWorker>EdgeOfAbyss.Hope.HopeWorker_Mood</hopeWorker>
+        <hopeName>from mood</hopeName>
+        <description>This is the hope level from this creature's mood.</description>
+        <flavorText>Feeling good allows one to view the world in a better light, making them feel even better.</flavorText>
+        <hint>This hope is maintained by having good mood, and is drained by having bad mood.</hint>
+    </EdgeOfAbyss.Hope.HopeDef>
+
+<!--
+    <EdgeOfAbyss.Hope.HopeDef>
+        <defName>AutonomyHope</defName>
+        <displayOrder>1000</displayOrder>
+        <expectedRange>5</expectedRange>
+        <hopeWorker>EdgeOfAbyss.Hope.HopeWorker_Empty</hopeWorker>
+        <hopeName>from personal autonomy</hopeName>
+        <description>This is the hope level from this creature's ability to remain autonomous.</description>
+        <flavorText>Dignity. Rights. Liberty. The highest forms of self-fulfillment and self-realization currently imaginable to civilization galaxy-wide.</flavorText>
+        <hint>This is a persistent hope. This hope changes at a very slow rate. Those that do not have sufficient personal freedom (e.g. prisoners and bedridden colonists) suffers from this.</hint>
+    </EdgeOfAbyss.Hope.HopeDef>
+-->
+</Defs>

@@ -1,0 +1,35 @@
+"With this prevalent, unending violence over the months, we are at the Edge of Abyss."
+
+[h1]Quick Info[/h1]
+[list]
+[*]Hopeful Colonist is Good Colonist
+[*]Requires Harmony and HugsLib
+[*]Safe to add to existing saves
+[*]Safe to remove from ongoing saves (for now)
+[/list]
+
+[h1]The Edge of Abyss[/h1]
+This mod adds in a new system: Hope. You can think of this as an extension to the vanilla Mood system. Hope and Mood compliment each other; good mood will inspire high hope, and high hope will grant a mood bonus. This is the same with poor mood and low hope.
+
+There are two (planned or WIP) types of Hope: Transient and Persistent. See GitHub documentation for more details.
+
+[list]
+[*]Transient Hope: "little hopes" that exist within your daily life, such as eating, sleeping, and having fun; they can change throughout the day
+[*]Persistent Hope: more significant form of hope that is compared more to the "life events", such as marriages, rivals, deaths, and kidnaps; they are unlikely to change, and are considered to have constant strength until some event/incident happens
+[/list]
+
+There will eventually be more types of hope available for the Colonists. There will also be more varied bonuses/penalties due to hope for the Colonists.
+
+[h1]GitHub and Docs[/h1]
+The GitHub repository, along with some detailed documentation and previous version releases, are available at here.
+
+[h1]Support and Donations[/h1]
+You are welcome to buy me some coffee at Ko-Fi!
+
+[h1]Credits[/h1]
+This mod would not be possible without the following people:
+
+[h1]Concluding Notes[/h1]
+Do not expect quick updates, because real life has just become very tricky for all of us, including me.
+
+Still, may your glorious Colonists stay safe and healthy in the isolated corners of the Rim!

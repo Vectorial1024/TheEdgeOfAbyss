@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <MainButtonDef>
+    <defName>EdgeOfAbyss_HopeTab</defName>
+    <label>hope</label>
+    <description>Provides an overview of the hope levels of your colonists.</description>
+    <tabWindowClass>EdgeOfAbyss.UI.MainTabWindow_HopeOverview</tabWindowClass>
+    <order>170</order>
+    <validWithoutMap>true</validWithoutMap>
+  </MainButtonDef>
+</Defs>

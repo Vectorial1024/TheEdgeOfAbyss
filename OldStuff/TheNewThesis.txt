@@ -1,0 +1,28 @@
+Desynchronized, Tales and News, The New Thesis
+
+Simple Darkness (name subject to change)
+"A Dark Rim"
+"The Edge of Abyss" (深淵邊緣) (a huge smackdown to the government lol)
+
+[Simple Description]
+
+This is a mod that attempts to depict the darker reality of humanity.
+
+This mod attempts to convey a deep and heavy message to its users. Read about the message by visiting the GitHub document here.
+
+[The Opening Thesis]
+
+Following the 30th Anniversary Commemoration of the Tienanmen Massacre of 1989 on the Fourth of June of the Year 2019 in Hong Kong, the city plunged into an endless pit of despair as the government and the people could not resolve their conflicts and differences on the controversial "extradition" bill. Hong Kong, as we know of her for now, has been transformed so much by the political strife and unrest that it basically has become a distinct city, albeit bearing yet the same name.
+
+The tales from Hong Kong has become prime and irreplaceable material for me to make reference from to make "reality depiction" mods, yet I found that the original Desynchronized mod is no longer sufficient for me to depict the darker reality of humanity as seen from the tragic stories sent 24-7 directly from Hong Kong. Therefore, I decided it would be best for me to completely rewrite the mod to introduce new features (along with porting the previous news-spreading features, of course).
+
+As one of the local Hong Kongers forcibly been participated in this ongoing large-scale social catastrophe, I do hope to raise this question once again, the same question from when I started to port the ClosedDoors mod, to all of the world:
+
+"How do we wish to live our lives?"
+
+Make the right choice. Your answer shall direct the Grand Bloody Wheels of History to grind ruthlessly forward forevermore.
+
+[Features]
+- Hope: High hope grants mood bonus, low hope grants mood malus
+- Nihilistic trait: permanent negative hope malus, kind of like Depressive trait
+- Affirmativist trait: permanent positive hope bonus, kind of like Sanguine trait
