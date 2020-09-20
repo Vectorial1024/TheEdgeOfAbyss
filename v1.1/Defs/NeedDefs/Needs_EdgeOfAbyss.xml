@@ -4,7 +4,7 @@
     <defName>Hope</defName>
     <needClass>EdgeOfAbyss.Hope.Need_Hope</needClass>
     <label>hope</label>
-    <description>Hope represents how positive or negative someone views their future. High hope will produce good mood, and good mood will contribute to high hope.\n\nSee the Hope tab for a breakdown of the Hope score.</description>
+    <description>Hope represents how positive or negative someone views their future, and as a result, their sense of belonging within this faction.\n\nSee the Hope tab for a breakdown of the Hope score.</description>
     <minIntelligence>Humanlike</minIntelligence>
     <baseLevel>0.5</baseLevel>
     <listPriority>350</listPriority>

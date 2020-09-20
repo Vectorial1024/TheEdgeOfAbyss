@@ -9,6 +9,8 @@ namespace EdgeOfAbyss.Hope
 {
     public class HopeWorker_Empty : HopeWorker
     {
+        public override bool HopeIsApplicableToCreature => true;
+
         public HopeWorker_Empty(Pawn pawn): base(pawn)
         {
 

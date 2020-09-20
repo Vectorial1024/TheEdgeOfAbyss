@@ -17,7 +17,7 @@ namespace EdgeOfAbyss.Hope
 
         public readonly int HopeTickInterval = 150;
 
-        public float CurrentHopeLevel
+        public virtual float CurrentHopeLevel
         {
             get
             {
@@ -42,7 +42,7 @@ namespace EdgeOfAbyss.Hope
 
         public abstract void Tick150Interval();
 
-        public void ExposeData()
+        public virtual void ExposeData()
         {
             Scribe_Defs.Look(ref def, "def");
             Scribe_Values.Look(ref hopeLevel, "hopeLevel");
@@ -59,5 +59,15 @@ namespace EdgeOfAbyss.Hope
         public string Hint => def.hint;
 
         public int ExpectedRange => def.expectedRange;
+
+        /// <summary>
+        /// Indicate whether this Hope can be applied to this Pawn.
+        /// <para/>
+        /// This is used to detect pawns having impossible HopeWorkers attached to them because they
+        /// e.g. simply do not have the relevant Need.
+        /// <para/>
+        /// Derived types should specify in what circumstances will the HopeWorker be valid/invalid.
+        /// </summary>
+        public virtual bool HopeIsApplicableToCreature => false;
     }
 }

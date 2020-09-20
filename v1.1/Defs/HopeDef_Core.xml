@@ -5,7 +5,7 @@
         <defName>TotalHope</defName>
         <displayOrder>0</displayOrder>
         <hopeWorker>EdgeOfAbyss.Hope.HopeWorker_TotalHope</hopeWorker>
-        <hopeName>total hope</hopeName>
+        <hopeName>total belongingness</hopeName>
         <description>This is the sum of all hope levels of this creature.</description>
         <flavorText>Ah, yes, hope: an intangible enigma, the manifestation of faith in trying times, often irrational, but undeniably powerful. Intriguing, indeed.</flavorText>
         <hint>Having low total hope will worsen the mood of this creature.</hint>
@@ -16,10 +16,10 @@
         <displayOrder>100</displayOrder>
         <expectedRange>10</expectedRange>
         <hopeWorker>EdgeOfAbyss.Hope.HopeWorker_Food</hopeWorker>
-        <hopeName>nutritional hope</hopeName>
-        <description>This is the hope level from having enough to eat.</description>
+        <hopeName>hope from nutrition</hopeName>
+        <description>This is the hope level from having enough decent food to eat.</description>
         <flavorText>Entropy dictates that all must consume to survive, and generously rewards those who follows such truthful advice.</flavorText>
-        <hint>This hope always decreases at a speed dependent on how hungry this creature is. Maintain this hope by feeding this creature decent food.</hint>
+        <hint>This hope always decreases at a speed dependent on how hungry this creature is.</hint>
     </EdgeOfAbyss.Hope.HopeDef>
 
     <EdgeOfAbyss.Hope.HopeDef>
@@ -27,10 +27,21 @@
         <displayOrder>200</displayOrder>
         <expectedRange>10</expectedRange>
         <hopeWorker>EdgeOfAbyss.Hope.HopeWorker_Mood</hopeWorker>
-        <hopeName>from mood</hopeName>
+        <hopeName>hope from mood</hopeName>
         <description>This is the hope level from this creature's mood.</description>
         <flavorText>Feeling good allows one to view the world in a better light, making them feel even better.</flavorText>
         <hint>This hope is maintained by having good mood, and is drained by having bad mood.</hint>
+    </EdgeOfAbyss.Hope.HopeDef>
+
+    <EdgeOfAbyss.Hope.HopeDef>
+        <defName>RestHope</defName>
+        <displayOrder>300</displayOrder>
+        <expectedRange>10</expectedRange>
+        <hopeWorker>EdgeOfAbyss.Hope.HopeWorker_Rest</hopeWorker>
+        <hopeName>hope from rest</hopeName>
+        <description>This is the hope level from having enough sleep.</description>
+        <flavorText>The mind is indeed willing to explore and experience all that exists in the world, to admire nature's beauty and elegance, but the flesh is weak.</flavorText>
+        <hint>This hope always decreases at a speed dependent on how exhausted this creature is.</hint>
     </EdgeOfAbyss.Hope.HopeDef>
 
 <!--

@@ -12,6 +12,10 @@ namespace EdgeOfAbyss.Hope
     public class Need_Hope : Need
     {
         List<HopeWorker> allHopeWorkers = new List<HopeWorker>();
+        /// <summary>
+        /// Do NOT use this as the list of all HopeWorkers of this pawn.
+        /// This is placed as a property because it is needed to preserve data across different Scribe-Load states.
+        /// </summary>
         List<HopeWorker> allWorkersFromFile = new List<HopeWorker>();
         int expectedMaxHopeRange;
         private readonly int TicksPerDay = 60000;
@@ -70,6 +74,10 @@ namespace EdgeOfAbyss.Hope
                 {
                     continue;
                 }
+                if (!worker.HopeIsApplicableToCreature)
+                {
+                    continue;
+                }
                 validWorkers.Add(worker);
             }
 
@@ -77,11 +85,14 @@ namespace EdgeOfAbyss.Hope
             foreach (HopeWorker workerFromDef in listFromDefs)
             {
                 // Find the 1st one, if exists
-                HopeWorker existingWorker = listFromFile.Where((HopeWorker workerFromFile) => workerFromFile.GetType() == workerFromDef.GetType()).First();
+                HopeWorker existingWorker = listFromFile.Where((HopeWorker workerFromFile) => workerFromFile.GetType() == workerFromDef.GetType()).FirstOrDefault();
                 if (existingWorker == null)
                 {
                     // Does not already exist; this must be a new worker.
-                    validWorkers.Add(workerFromDef);
+                    if (workerFromDef.HopeIsApplicableToCreature)
+                    {
+                        validWorkers.Add(workerFromDef);
+                    }
                 }
             }
 

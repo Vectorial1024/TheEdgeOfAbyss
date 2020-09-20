@@ -11,6 +11,8 @@ namespace EdgeOfAbyss.Hope
 {
     public class HopeWorker_Food : HopeWorker
     {
+        public override bool HopeIsApplicableToCreature => pawn.needs.food != null;
+
         public HopeWorker_Food(Pawn pawn): base(pawn)
         {
             // no assumption on food level to be made
@@ -105,7 +107,49 @@ namespace EdgeOfAbyss.Hope
             // EdgeOfAbyssMain.LogError("Eating " + food.ToString() + ", " + consumedNutrition);
             // determine actual amounts of nutrition consumed
             float actualNutritionRestored = Mathf.Min(consumedNutrition, pawn.needs.food.NutritionWanted);
-            float hopeAdjustment = actualNutritionRestored;
+            List<ThoughtDef> foodThoughts = FoodUtility.ThoughtsFromIngesting(pawn, food, food.def);
+            float foodHopeRestoration;
+            if (CalculateFoodHopeRestoration_VarietyMatters(food, consumedNutrition, actualNutritionRestored, out foodHopeRestoration))
+            {
+                // successfully calculated food hope through the Variety Matters submod
+            }
+            else
+            {
+                // this always returns something
+                foodHopeRestoration = CalculateFoodHopeRestoration_Vanilla(food, consumedNutrition, actualNutritionRestored);
+            }
+            
+            // Royalty DLC
+            if (foodThoughts.Contains(ThoughtDefOf.AteFoodInappropriateForTitle))
+            {
+                // this is just a blind guess right now
+                // not saying the food is trash, but the food is not exactly something I want
+                foodHopeRestoration *= 0.75f;
+            }
+
+            AdjustHopeLevel(foodHopeRestoration);
+        }
+
+        protected void AdjustHopeLevel(float amount)
+        {
+            hopeLevel += amount;
+            if (hopeLevel > ExpectedRange)
+            {
+                hopeLevel = ExpectedRange;
+            }
+        }
+
+        // let the potential VarietyMatters sub-mod override this.
+        public bool CalculateFoodHopeRestoration_VarietyMatters(Thing food, float consumedNutrition, float effectiveConsumedNutrition, out float hopeRestoration)
+        {
+            hopeRestoration = 0;
+            return false;
+        }
+
+        // must always succeed here.
+        public float CalculateFoodHopeRestoration_Vanilla(Thing food, float consumedNutrition, float effectiveConsumedNutrition)
+        {
+            float hopeAdjustment = effectiveConsumedNutrition;
             List<ThoughtDef> foodThoughts = FoodUtility.ThoughtsFromIngesting(pawn, food, food.def);
             // Mainly to check if the food is freaking raw
             if (foodThoughts.Contains(ThoughtDefOf.AteAwfulMeal))
@@ -128,24 +172,7 @@ namespace EdgeOfAbyss.Hope
                 hopeAdjustment = 0;
             }
 
-            // Royalty DLC
-            if (foodThoughts.Contains(ThoughtDefOf.AteFoodInappropriateForTitle))
-            {
-                // this is just a blind guess right now
-                // not saying the food is trash, but the food is not exactly something I want
-                hopeAdjustment *= 0.75f;
-            }
-
-            AdjustHopeLevel(hopeAdjustment);
-        }
-
-        protected void AdjustHopeLevel(float amount)
-        {
-            hopeLevel += amount;
-            if (hopeLevel > ExpectedRange)
-            {
-                hopeLevel = ExpectedRange;
-            }
+            return hopeAdjustment;
         }
     }
 }

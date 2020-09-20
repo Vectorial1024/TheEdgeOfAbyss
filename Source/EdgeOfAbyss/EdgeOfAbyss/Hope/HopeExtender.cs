@@ -13,16 +13,7 @@ namespace EdgeOfAbyss.Hope
     {
         public static Need_Hope GetNeedHope(this Pawn pawn)
         {
-            if (pawn == null)
-            {
-                return null;
-            }
-            var queryNeedHope = pawn.needs.AllNeeds.Where((Need need) => need is Need_Hope);
-            if (queryNeedHope.EnumerableNullOrEmpty())
-            {
-                return null;
-            }
-            return queryNeedHope.First() as Need_Hope;
+            return pawn?.needs.AllNeeds.Where((Need need) => need is Need_Hope).FirstOrDefault() as Need_Hope;
         }
 
         public static HopeWorker_Food GetFoodHope(this Need_Hope hope)
@@ -31,7 +22,16 @@ namespace EdgeOfAbyss.Hope
             {
                 return null;
             }
-            return hope.AllHopeWorkers.Where((HopeWorker worker) => worker is HopeWorker_Food).First() as HopeWorker_Food;
+            return hope.AllHopeWorkers.Where((HopeWorker worker) => worker is HopeWorker_Food).FirstOrDefault() as HopeWorker_Food;
+        }
+
+        public static HopeWorker_Rest GetRestHope(this Need_Hope hope)
+        {
+            if (hope == null)
+            {
+                return null;
+            }
+            return hope.AllHopeWorkers.Where((HopeWorker worker) => worker is HopeWorker_Rest).FirstOrDefault() as HopeWorker_Rest;
         }
 
         public static HopeWorker_TotalHope GetTotalHope(this Pawn pawn)

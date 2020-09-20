@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Use either "\n" or XML whitespace return to make linebreaks; both method works -->
+
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="UpdateFeatureBase">
+		<modNameReadable>The Edge of Abyss</modNameReadable>
+		<modIdentifier>com.vectorial1024.rimworld.edgeofabyss</modIdentifier>
+		<linkUrl>https://github.com/Vectorial1024/TheEdgeOfAbyss</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	
+	<HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+		<defName>EOA_v1_0_0</defName>
+		<assemblyVersion>1.0.0</assemblyVersion>
+		<content>Initial release|- New system: Hope
+- New Hope type: Total Hope; hope level is the sum of all other types of Hope
+- New Hope type: Nutritional Hope; hope level depends on food supply
+- New Hope type: Mood-induced Hope; hope level depends on mood
+- New spectrum-type Thought that depends on Total Hope
+</content>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+		<defName>EOA_v1_0_1</defName>
+		<assemblyVersion>1.0.1</assemblyVersion>
+		<content>- General shift: Hope now relates to a new concept: Belongingness
+- Nutritional Hope now appears as "Hope from nutrition"
+- Mood Hope now appears as "Hope from mood"
+- New Hope Type: Rest Hope as "Hope from rest"
+- Adjusted some text
+</content>
+	</HugsLib.UpdateFeatureDef>
+	
+    <!--
+	<HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+		<defName>Desync_1_2_0</defName>
+		<assemblyVersion>1.2.0</assemblyVersion>
+		<content>First paragraph.|img:Things/Item/Meal/Fine,Things/Item/Meal/Lavish,Things/Item/Meal/Simple|caption:This is a caption.|Another paragraph with &lt;b&gt;rich text&lt;/b&gt;.</content>
+	</HugsLib.UpdateFeatureDef>
+    -->
+</Defs>

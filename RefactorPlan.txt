@@ -1,0 +1,41 @@
+Refactor to become "Isolation and Attachment: strings of fate are hard and tough"
+-> Can accept desync up to "known pawn died"
+-> Not seeing friends/rivals now actually have an impact
+
+New type: "attachment hope"
+{
+  - Pawn other
+  - float lastKnownRelationWithOther
+  - (complex object) lastKnownPawnAliveState (unknown, alive, or dead, or non-deterministic (e.g. sold to others already))
+}
+
+Social Knowledge Tracker Framework // "Friendship Memory Framework"
+Pawn subject
+Input Pawn other
+If does not exist in dictionary, return null -> unknown
+If exists in dictionary, return the dictionary row
+Upsert state to alive every time there is social interaction with "other"
+If pawn died, need extra code to notify to set state = died
+- tick rare, 250 interval, add to "last updated, ticks ago"
+-> leave room for desync/i&a to set unknown state
+
+- "Relational hope"
+  - Without any mods, decays towards 0
+- Interacted with my friend/rival: depending on these (positive mode):
+  - Friend is nearby: set to 0.5x of "relational hope"
+  - Chit-chat with friend: set to 1x of "relational hope"
+  - Deep talk with friend: set to 1.5x of "relational hope"
+  - Rival is nearby: set to 0.5x
+  - Slighted by rival: set to 1x
+  - Insulted by rival: set to 1.5x
+  - Social fight with rival: set to 1.75x
+- If 5 days without any of those above stuff, flip to "negative mode"
+  - If they can't even see the friend/rival for any time period in the 5 days then damn... the guy really left
+- When flipping to negative mode:
+  - Decay target set to beyond 0: friends go to negative, rivals go to positive
+- When friend/rival death confirmed:
+  - Set display string to e.g. "Isolated from friend (unknown)"
+  - Decay target slowly drifts back to 0
+  - When reaches 0, remove it
+- Isolated from my friend/rival
+  - 

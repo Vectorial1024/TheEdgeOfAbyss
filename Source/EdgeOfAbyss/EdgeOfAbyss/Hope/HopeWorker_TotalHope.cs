@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EdgeOfAbyss.UI;
 using Verse;
 
 namespace EdgeOfAbyss.Hope
@@ -10,6 +11,8 @@ namespace EdgeOfAbyss.Hope
     public class HopeWorker_TotalHope : HopeWorker
     {
         Need_Hope hope = null;
+
+        public override bool HopeIsApplicableToCreature => pawn.IsCapableOfThought();
 
         public HopeWorker_TotalHope(Pawn pawn): base(pawn)
         {
